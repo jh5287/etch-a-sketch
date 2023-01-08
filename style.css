@@ -1,0 +1,14 @@
+.box {
+    border: thin solid black;
+    width: 354px;
+    height: 355px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.square {
+    border: thin solid black;
+    width: 20px;
+}

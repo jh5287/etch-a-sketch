@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: mediumslateblue;
+}
+
+
+
 .box {
     border: thin solid black;
     width: 354px;
@@ -10,5 +20,11 @@
 
 .square {
     border: thin solid black;
+    background-color: white;
     width: 20px;
+}
+
+.restart {
+    width: fit-content;
+    margin-top: 60px;
 }

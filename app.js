@@ -13,12 +13,16 @@ while (count != 0){
 
 let colors = ['red', 'blue', 'green', 'teal', 'rosybrown', 'tan', 'plum', 'saddlebrown'];
 let squares = document.querySelectorAll('.square');
-squares.forEach(function(elem){
-    elem.addEventListener('mouseover', () =>{
-        elem.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-})
-})
+//squares.forEach(function(elem){
+//    elem.addEventListener('mouseover', () =>{
+//        elem.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+//})
+//})
 
+//testing giving parent node the event listner 
+box.addEventListener('mouseover', function(event) {
+    event.target.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+  }, false); 
 
 
 

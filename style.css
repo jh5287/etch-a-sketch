@@ -10,18 +10,17 @@ body {
 
 .box {
     border: thin solid black;
-    width: 354px;
-    height: 355px;
+    width: 320px;
+    height: 320px;
     margin:auto;
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
 }
 
 .square {
     border: thin solid black;
+    box-sizing: border-box;
     background-color: white;
-    width: 20px;
 }
 
 .restart {

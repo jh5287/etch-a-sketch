@@ -13,13 +13,7 @@ while (count != 0){
 
 let colors = ['red', 'blue', 'green', 'teal', 'rosybrown', 'tan', 'plum', 'saddlebrown'];
 let squares = document.querySelectorAll('.square');
-//squares.forEach(function(elem){
-//    elem.addEventListener('mouseover', () =>{
-//        elem.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-//})
-//})
 
-//testing giving parent node the event listner 
 box.addEventListener('mouseover', function(event) {
     event.target.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
   }, false); 
@@ -39,14 +33,17 @@ clearBtn.addEventListener('click', () =>{
 clearBtn.addEventListener('click', () => {
     let newCount = prompt("Enter number of squares: ");
     newCount = Number(newCount);
+    newCount = Math.round(Math.sqrt(newCount));
+    console.log(newCount);
+    let perfectSquare = newCount * newCount;
     squares.forEach(element => {
         element.style.backgroundColor = 'white';
-        while (newCount != 0){
+        while (perfectSquare != 0){
             let squares = document.createElement('div');
             squares.classList.add('square');
-            squares.style.width = "20px"
+            squares.setAttribute('style', `width: ${(320/newCount)}px;`);
             box.appendChild(squares);
-            newCount--;   
+            perfectSquare--;
         }
     })  
 })

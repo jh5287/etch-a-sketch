@@ -1,7 +1,6 @@
 body {
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
     align-items: center;
     background-color: mediumslateblue;
 }
@@ -18,8 +17,6 @@ body {
 }
 
 .square {
-    border: thin solid black;
-    box-sizing: border-box;
     background-color: white;
 }
 

@@ -15,7 +15,7 @@ let colors = ['red', 'blue', 'green', 'teal', 'rosybrown', 'tan', 'plum', 'saddl
 let squares = document.querySelectorAll('.square');
 
 box.addEventListener('mouseover', function(event) {
-    event.target.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    event.target.style.backgroundColor = "black";
   }, false); 
 
 
@@ -48,3 +48,25 @@ clearBtn.addEventListener('click', () => {
     })  
 })
 
+//B&W button
+let bwBtn =document.querySelector('.BW');
+bwBtn.addEventListener('click', ()=> {
+    box.removeEventListener('mouseover', function(event) {
+        event.target.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      }, false);
+    box.addEventListener('mouseover', function(event) {
+        event.target.style.backgroundColor = "black";
+      }, false); 
+})
+
+
+//color button
+let colorBtn = document.querySelector('.color');
+colorBtn.addEventListener('click', ()=> {
+    box.removeEventListener('mouseover', function(event) {
+        event.target.style.backgroundColor = "black";
+      }, false);
+    box.addEventListener('mouseover', function(event) {
+        event.target.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      }, false);
+})
